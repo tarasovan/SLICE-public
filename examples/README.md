@@ -1,11 +1,5 @@
 # SLICE (SMARTS and Logic In ChEmistry): Fast generation of molecules, using advanced chemical synthesis logic and modern coding style
 
-This repository contains 2 folders :
-
-
-***********
-
-**Examples:**
 
 This folder contains four transforms TF 2201, TF 2875, TF 6005 and TF 7009
 
@@ -24,18 +18,5 @@ This folder contains four transforms TF 2201, TF 2875, TF 6005 and TF 7009
 
 
 
-***********
-
-**SLICE-engine:**
-
-
-This repository contains SLICE-engine. There is a README for more details.
-
-***********
-
-**SLICE-gui:**
-
-
-This repository contains SLICE-GUI with release to install. There is a README for more details.
 
   
