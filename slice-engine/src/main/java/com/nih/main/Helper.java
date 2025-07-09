@@ -48,7 +48,9 @@ class Helper {
         sb.append(NEW_LINE);
         sb.append("Authors: Victorien Delannee, Stefi Nouleho");
         sb.append(NEW_LINE);
-        sb.append("The code was developed at the Computer-Aided Drug Design (CADD) Group");
+        sb.append("The code was developed at the Cancer Innovation Laboratory");
+        sb.append(NEW_LINE);
+        sb.append("Center for Cancer Research");
         sb.append(NEW_LINE);
         sb.append("NCI-National Cancer Institute");
         sb.append(NEW_LINE);
@@ -63,7 +65,7 @@ class Helper {
 
         sb.append("Reference");
         sb.append(NEW_LINE);
-        sb.append("<we will add the reference to your preprints/papers here as soon as we have them>");
+        sb.append("<we will add the reference to preprints/papers here as soon as we have them>");
         sb.append(NEW_LINE);
         //sb.append("doi: 10.26434/chemrxiv.12058971");
         //sb.append(NEW_LINE);
