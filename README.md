@@ -7,7 +7,7 @@ This repository contains 3 folders :
 
 **Examples:**
 
-This folder contains all transforms and data used in the paper.
+This folder contains all transforms and data used in the paper. There is a README for more details.
 
 ***********
 
