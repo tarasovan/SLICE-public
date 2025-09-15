@@ -27,7 +27,7 @@ SLICE Designer is compatible with framework Electron.js -> https://www.electronj
 
 **Electron compilation to generate an executable file :**
 
-Navigate to the electron / directory then for:
+Navigate to the electron / directory, then for:
 
 
 - MacOS silicon M1/M2/M3: npx electron-forge make --platform=darwin --arch=arm64
