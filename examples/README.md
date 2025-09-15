@@ -8,13 +8,13 @@ This folder contains four transforms TF 2201, TF 2875, TF 6005 and TF 7009
   
 - For each transform XXXX, there is :
 
-          - A TF_XXXX_Vj.jslice file needed to re-open in the SLICE Designer or to run it in the SLICE engine.
-          - A TF_XXXX_Vj.slice file easily readable by user to see the chemistry
+          - A TF_XXXX_Vj.jslice file needed to edit and visualize the transform in the SLICE Designer or to run it in the SLICE engine.
+          - A TF_XXXX_Vj.slice file easily readable file by user to see the chemistry. The user can open this file in any text editor.
           - A XXXX_set_BBS_20.txt small set of compatibles Building blocks with 20 reactants 
 
 - script_target_compound.sh : script file to generate molecules for a target compound. The command line to run it is :
 
-  ./script_target_compound.sh block1.tsv BBS_Enamine_284k.tsv TF_7009_v8.jslice SAVI-1.0.0-jar-with-dependencies.jar 5000
+  ./script_target_compound.sh   block1.tsv   BBS_Enamine_284k.tsv   TF_7009_v8.jslice   SAVI-1.0.0-jar-with-dependencies.jar   5000
 
 
 
