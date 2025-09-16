@@ -261,6 +261,35 @@ Blockly.Blocks['ring_properties_variable'] = {
   }
 };
 
+Blockly.Blocks['ring_properties_variable_nosize'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(new Blockly.FieldDropdown([
+        ["the", "THE"],
+        ["carbocyclic", "CARBOCYCLIC"],
+        ["common", "COMMON"],
+        ["heterocyclic", "HETEROCYCLIC"]
+      ]), "PREFIX")
+      .appendField(new Blockly.FieldDropdown([
+        ["aliphatic or aromatic", "ALIPHATIC_OR_AROMATIC"],
+        ["aliphatic", "ALIPHATIC"],
+        ["aromatic", "AROMATIC"]
+      ]), "AROMATICITY")
+    .appendField(" ring containing");
+    this.appendValueInput("Object")
+      .setCheck(["atom_subject",
+        "Generic",
+        "Subject"
+      ]);
+    this.setInputsInline(true);
+    //its a Set type
+    this.setOutput(true, 'Set');
+    this.setColour(135);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
 Blockly.Blocks["electron_density_predefined_block"] = {
   init: function () {
     this.appendDummyInput().appendField("electron density on");

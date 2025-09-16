@@ -130,3 +130,12 @@ Blockly.SLICE['ring_properties_variable'] = function (block) {
   var code = prefix + " " + aromaticity + " ring of size "+ size +" containing " + argument;
   return [code, order];
 };
+
+Blockly.SLICE['ring_properties_variable_nosize'] = function (block) {
+  var order = Blockly.SLICE.ORDER_RELATIONAL;
+  var prefix = RING_PREFIX[block.getFieldValue("PREFIX")];
+  var aromaticity = AROMATICITY[block.getFieldValue("AROMATICITY")];
+  var argument = Blockly.SLICE.valueToCode(block, "Object", order) || "subject";
+  var code = prefix + " " + aromaticity + " ring containing " + argument;
+  return [code, order];
+};

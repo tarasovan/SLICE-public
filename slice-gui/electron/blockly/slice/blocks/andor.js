@@ -25,7 +25,7 @@ Blockly.defineBlocksWithJsonArray([{
   }, ],
   "output": "Array",
   "style": "list_blocks",
-  "helpUrl": "%{BKY_AND_OR_HELPURL}",
+  //"helpUrl": "%{BKY_AND_OR_HELPURL}",
   "tooltip": "%{BKY_AND_OR_TOOLTIP}",
   "mutator": "and_or_with_mutator",
 }, ]);
