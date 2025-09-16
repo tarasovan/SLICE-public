@@ -14,7 +14,7 @@ This folder contains all transforms and data used in the paper. There is a READM
 **SLICE-engine:**
 
 
-This repository contains SLICE-engine. There is a README for more details.
+This repository contains SLICE-Engine. There is a README for more details.
 
 ***********
 
