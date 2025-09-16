@@ -21,6 +21,6 @@ This repository contains SLICE-engine. There is a README for more details.
 **SLICE-gui:**
 
 
-This repository contains SLICE-GUI with release to install. There is a README for more details.
+This repository contains SLICE-GUI with releases to install. There is a README for more details.
 
   
