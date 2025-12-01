@@ -1,0 +1,27 @@
+#node
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+pnpm-debug.log*
+dist/
+build/
+
+
+#app builds
+
+*.app
+*.exe
+*.dmg
+*.asar
+*.deb
+*.rpm
+*.zip
+
+
+slice-gui/electron/node_modules/
+slice-gui/electron/dist
+slice-gui/electron/out/
+slice-gui/electron/build/
