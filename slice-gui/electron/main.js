@@ -29,8 +29,8 @@ function createWindow () {
   ipcMain.on("getWindow",(event, arg)=>{ 
     //const [ currentWindowX, currentWindowY ] = mainWindow.getPosition();
     let child= new BrowserWindow({
-      width: 370,
-      height: 350,
+      width: 400,
+      height: 520,
       show:false,
       x: 800,
       y: 320,

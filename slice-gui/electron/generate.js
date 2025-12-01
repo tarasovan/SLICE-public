@@ -26,6 +26,17 @@ window.generateMolecules = async function () {
     let inchiKey =  window.document.getElementById("option3");
     if (inchiKey.checked)
         relativePath +=' -i'; 
+    let defineNumber = document.querySelector('input[name="defineNumber"]:checked').value;
+    if( defineNumber ==="yes"){
+        let productsFile = Number(window.document.getElementById("valueInput").value);
+        relativePath +=' -z '+ productsFile;
+    }
+    let defineMax = document.querySelector('input[name="defineMax"]:checked').value;
+    if( defineMax ==="yes"){
+        let productsMax = Number(window.document.getElementById("valueInputMax").value);
+        relativePath +=' -p '+ productsMax;
+    }
+    
     console.log(relativePath);
     const childPorcess = exec(relativePath, {maxBuffer: 1024 * 800000}, function(err, stdout, stderr) {
     if (err) {
