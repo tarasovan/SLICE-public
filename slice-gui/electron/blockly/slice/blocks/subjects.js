@@ -392,6 +392,19 @@ Blockly.Blocks['select_molecule'] = {
   }
 };
 
+Blockly.Blocks['number_atoms_molecule'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField("the number of atoms in molecule")
+    this.setInputsInline(true);
+    this.setOutput(true, 'molecule_subject');
+    this.setColour(135);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+
 Blockly.Blocks['select_appendages_by_atom_mapping'] = {
   init: function () {
     this.appendDummyInput()

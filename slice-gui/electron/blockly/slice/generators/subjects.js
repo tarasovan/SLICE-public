@@ -214,6 +214,13 @@ Blockly.SLICE["select_molecule"] = function (block) {
   return [code, order];
 };
 
+Blockly.SLICE["number_atoms_molecule"] = function (block) {
+  var order = Blockly.SLICE.ORDER_ATOMIC;
+
+  var code = "the number of atoms in molecule";
+  return [code, order];
+};
+
 Blockly.SLICE["select_appendages_by_atom_mapping"] = function (block) {
   var order = Blockly.SLICE.ORDER_ATOMIC;
   var code = "atom " + Number(block.inputList[0].fieldRow[1].value_);
