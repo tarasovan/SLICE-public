@@ -1,5 +1,4 @@
-# i-slice-engine
-Our internal repository for the development of the SLICE Engine code
+# slice-engine
 SLICE is based on expert knowledge used to define the rules for selection of synthesis blocks and the generation of products. This repository focus on the generation of products. 
 SLICE is powered by ANTLR (ANother Tool for Language Recognition), which is a parser generator for reading, processing, executing, or translating structured text or binary files. CDK is the cheminformatics core of SLICE. It parses the query molecule(s)/reactions, manages the SMARTS patterns, and interprets SLICE logic. CDK will first match a SMARTS pattern with a query molecule.
 If the pattern matches, the logic applied to the molecule is then checked. The logic is coded by a set of functions in JAVA, which use CDK to reason on a molecule. 
@@ -15,7 +14,7 @@ Folder out/artifacts/SLICE/SAVI-1.0.0-jar-with-dependencies.jar
 
 ***********
 
-**A. Prerequisites to run the project if downloading :**
+**2.A. Prerequisites to run the project if downloading :**
 
 Before running the project, ensure the following are installed on your system:
 
@@ -25,12 +24,12 @@ Before running the project, ensure the following are installed on your system:
 
 ***********
 
-**B. Installation:**
+**2.B. Installation:**
 
-1. Clone this repository to your local machine :
+1. Clone this repository to your local machine (If git is not installed on your computer, you will need to install git first):
 ```
 git clone 
-cd i-slice-engine 
+cd slice-engine 
 ```
 2. Verify that Maven and Java are properly installed:
 ```
@@ -39,14 +38,14 @@ java -version
 ```
 ***********
 
-**C. Generation the .jar of the application:**
+**2.C. Generate the .jar of the application:**
 
  Build the engine
    Use the following command to build the project and package it with the local profile:
    ```
    mvn clean package -P local
    ```
-This command will;
+This command will:
 
 - Clean previous builds
 - Install dependencies
@@ -71,17 +70,19 @@ SAVI a la carte options
      -c,--cpu                              number of CPUs
      -l,--replace lower rating with kill   replace lower rating with kill
      -g,--ghost molecules                  delete ghost molecules
-     -v,--coompatiblebuildingBlocks        count the compatible building Blocks
+     -v,--coompatiblebuildingBlocks        count the compatible building blocks
      -i,--print products with inchikey     inchikey of products
+     -z,--maximum number of products       maximum number of products per file
+     -p,--number of products to display    number of products to display
      -h,--help                             Help page for command usage
 
   ```
 
 - Example :
 ```
-java -jar SAVI-1.0.0-jar-with-dependencies.jar -b BBs_Enamine-258k.tsv -s TF_7009_v8.jslice -v
+java -jar SAVI-1.0.0-jar-with-dependencies.jar -b BBs_Enamine-284k.tsv -s TF_7009_v8.jslice -v
   ```
-This will count the compatible Building blocks from file BBs_Enamine-258k.tsv according to the logic define in TF_7009_v8.jslice and put them into new files. 
+This will count the compatible building blocks from file BBs_Enamine-284k.tsv according to the logic define in TF_7009_v8.jslice.
 
-.jslice file is generated usign the i-slice-gui reposirtory;It is an open-source No-Code Development Platform (NCDP) that combines a molecule,
+.jslice file is generated using the slice-gui repository. It is an open-source No-Code Development Platform (NCDP) that combines a molecule,
 reaction, and pattern drawing editor with a SMARTS editor and a logic assistant for generating SLICE chemistry. 
