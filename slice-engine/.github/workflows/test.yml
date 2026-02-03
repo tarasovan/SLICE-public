@@ -1,0 +1,33 @@
+name: Java CI with Maven
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: maven
+    - name: Build with Maven (Fat JAR)
+      run: mvn -B clean package -P local --file pom.xml
+    - run: mkdir staging && cp target/*-jar-with-dependencies.jar staging
+    - uses: actions/upload-artifact@v4
+      with:
+        name: target
+        path: staging
+
+    # Optional: Update dependency graph for Dependabot
+    - name: Update dependency graph
+      uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
