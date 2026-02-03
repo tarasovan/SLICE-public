@@ -701,11 +701,8 @@ public class Transformer {
 				//HVG
 				//System.out.println(at.getIndex()+ " before "+ at.getSymbol()+ " "+ at.isAromatic());
 
-				if(at.getSymbol().equals("N") && at.isAromatic() && ElementCalculation.calculateValence(at.getSymbol()) + 1 == (bondSum(aggregateProducts, at) + at.getImplicitHydrogenCount())) {
-					System.out.println(at.getIndex() + " here " + at.getSymbol() + " " + at.isAromatic() + " " + bondSum(aggregateProducts, at) + " " + at.getImplicitHydrogenCount());
-				}
-				else{
-				removeHydrogensonAt(aggregateProducts, at);
+				if(!(at.getSymbol().equals("N") && at.isAromatic() && ElementCalculation.calculateValence(at.getSymbol()) + 1 == (bondSum(aggregateProducts, at) + at.getImplicitHydrogenCount()))){
+					removeHydrogensonAt(aggregateProducts, at);
 				}
 			}
 			//add missing hydrogens
@@ -726,7 +723,6 @@ public class Transformer {
 			if(at.getSymbol().equalsIgnoreCase("C") && at.isAromatic()){
 
                 if( bondSumHydrogen(aggregateProducts,at) > 1){
-					System.out.println("supp");
 					removeHydrogensonAt(aggregateProducts,at);
 					IAtom hydrogen = new Atom("H");
 					hydrogen.setImplicitHydrogenCount(0);
@@ -778,7 +774,6 @@ public class Transformer {
 			//double_bonds = false;
 			//double_aromatic = false;
 			if(bond.contains(at)){
-				System.out.println(bond.getBegin().getSymbol() + " " + bond.getEnd().getSymbol());
 				sum += bond.getOrder().numeric();
 				if(bond.getOrder() == SINGLE && bond.isAromatic()){
 					double_bonds = true;
@@ -793,7 +788,6 @@ public class Transformer {
 				sum++;
 			}
 		}
-	System.out.println(sum);
 		return sum;
 	}
 	//count the number of hydrogens having a bond to atom at in IAtomcontainer mol

@@ -218,7 +218,7 @@ public class SliceTester {
 		for (String[] row : buildingBlocks) {
 			String smiles = row[smilesColumnIndex];
 			try {
-				System.out.println(smiles);
+				//System.out.println(smiles);
 				Integer reactantNumber = tryParseInt(row[row.length - 1]);
 				//System.out.println("ReactantNumber: " + reactantNumber);
 				IAtomContainer buildingBlock = sp.parseSmiles(smiles);
@@ -1561,7 +1561,7 @@ public class SliceTester {
 						// key:aam in Smarts value: atom index of the matched atom in IAtomContainer
 						//System.out.println(mol.getSmarts() + " " +ptrn.matches(ac));
 						if (ptrn.matches(ac)) {
-							System.out.println("   =>" + mol.getSmarts());
+							//System.out.println("   =>" + mol.getSmarts());
 							// clone IAtomContainer because matchAll cannot be used for matching multiple
 							// SMARTS against the same container.
 							IAtomContainer ac2 = ac.clone();
@@ -1659,7 +1659,7 @@ public class SliceTester {
 					//System.out.println("pattern:" +ptrn.matches(ac));
 					
 						if (ptrn.matches(ac)) {
-							System.out.println("   =>"+ mol.smarts);
+							//System.out.println("   =>"+ mol.smarts);
 							//System.out.println("   =>"+ mol.logic);
 							//System.out.println("   =>" + mol.getSmarts());
 							// clone IAtomContainer because matchAll cannot be used for matching multiple
